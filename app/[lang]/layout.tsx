@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import { NextIntlClientProvider } from "next-intl";
+import { i18n } from "@/config/i18n.config";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,13 +13,18 @@ export const metadata: Metadata = {
     "Portfólio Desenvolvedor web com experiência em front end e back end. Criação de sites, interfaces chamativas e APIs REST usando React, Next.js, Java e mais.",
 };
 
-export default function RootLayout({
-  children,
+export async function generateStaticParams() {
+  const languages = i18n.locales.map((lang) => ({ lang }));
+  return languages;
+}
+export default async function RootLayout({
+  children, params
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode, params: { lang: string }
 }>) {
+
   return (
-    <html lang="pt-BR">
+    <html lang={params.lang}>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
