@@ -62,7 +62,9 @@ export default function RootLayout({
         />
         <link rel="icon" type="image/png" href="./src/images/homem.png" />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   );
 }
