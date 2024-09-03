@@ -2,7 +2,8 @@ import '../../styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { i18n } from '@/config/i18n.config';
-import { Nav } from '@/components/Nav';
+import { Nav } from '@/components/Nav/Nav';
+import FullScreenModal from '@/components/Modal/FullScreenModal';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children, params }: { children: React.React
   return (
     <html lang={params.lang}>
       <body className={inter.className}>
+        <FullScreenModal />
         <Nav />
         {children}
       </body>

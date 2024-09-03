@@ -1,18 +1,14 @@
+// Lang.tsx
 'use client';
 
 import { useParams, usePathname } from 'next/navigation';
-
 import Link from 'next/link';
 import { FlagKey, flag, locales } from './locales';
+import { getPathname } from '@/app/utils/pathname';
 
 export const Lang = () => {
   const { lang } = useParams();
   const pathname = usePathname();
-
-  const getPathname = (lng: string) => {
-    const path = pathname.split('/' + lang).join('');
-    return '/' + lng + path;
-  };
 
   return (
     <div className="group flex items-center">
@@ -24,7 +20,7 @@ export const Lang = () => {
 
           return (
             <li key={lng.code}>
-              <Link href={getPathname(lng.code)}>{lng.ico}</Link>
+              <Link href={getPathname(pathname, lang, lng.code)}>{lng.ico}</Link>
             </li>
           );
         })}
