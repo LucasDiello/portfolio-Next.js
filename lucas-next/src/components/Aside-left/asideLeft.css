@@ -1,0 +1,5 @@
+.sidenav {
+    transition: 0.3s ease; 
+    padding: 60px 20px 60px 60px;
+    border: 2px solid red;
+}

@@ -1,30 +1,29 @@
-// Lang.tsx
 'use client';
-
 import { useParams, usePathname } from 'next/navigation';
-import Link from 'next/link';
-import { FlagKey, flag, locales } from './locales';
-import { getPathname } from '@/app/utils/pathname';
-
+import { locales } from './locales';
 export const Lang = () => {
   const { lang } = useParams();
   const pathname = usePathname();
-
+  const getPathname = (lng: string) => {
+    const path = pathname.split('/' + lang).join('');
+    return '/' + lng + path;
+  };
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLang = event.target.value;
+    window.location.href = getPathname(newLang);
+  };
   return (
-    <div className="group flex items-center">
-      <button>{flag[lang as FlagKey]}</button>
-
-      <ul className="absolute top-12 hidden flex-col gap-2 group-hover:flex">
-        {locales.map((lng) => {
-          if (lng.code === lang) return null;
-
-          return (
-            <li key={lng.code}>
-              <Link href={getPathname(pathname, lang, lng.code)}>{lng.ico}</Link>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="flex items-center">
+      {' '}
+      <select value={lang} onChange={handleChange} className="rounded border px-2 py-1 ">
+        {' '}
+        {locales.map((lng) => (
+          <option key={lng.code} value={lng.code}>
+            {' '}
+            {lng.ico}{' '}
+          </option>
+        ))}{' '}
+      </select>{' '}
     </div>
   );
 };
