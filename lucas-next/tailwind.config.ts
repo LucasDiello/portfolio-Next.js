@@ -6,7 +6,14 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {},
+  theme: {
+    extend: {
+      fontFamily: {
+        "barlow": ["barlow-condensed", "sans-serif"],
+        roboto: ['Roboto', 'sans-serif'], 
+    },
+  },
+  },
   plugins: [],
 }
 export default config

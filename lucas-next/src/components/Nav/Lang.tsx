@@ -13,17 +13,12 @@ export const Lang = () => {
     window.location.href = getPathname(newLang);
   };
   return (
-    <div className="flex items-center">
-      {' '}
-      <select value={lang} onChange={handleChange} className="rounded border px-2 py-1 ">
-        {' '}
+      <select value={lang} onChange={handleChange} className="border pr-3 text-xs bg-inherit text-white">
         {locales.map((lng) => (
           <option key={lng.code} value={lng.code}>
-            {' '}
-            {lng.ico}{' '}
+            {lng.ico}
           </option>
-        ))}{' '}
-      </select>{' '}
-    </div>
+        ))}
+      </select>
   );
 };

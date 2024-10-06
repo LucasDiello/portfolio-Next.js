@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 .sidenav {
     transition: 0.3s ease; 
-    padding: 60px 20px 60px 60px;
-    border: 2px solid red;
+}
+
+.fontsOswald {
+    font-family: 'Oswald', sans-serif;
 }
