@@ -9,10 +9,29 @@ import ldmechanicsPerfil from "@/images/ldmechanics.png";
 import lmDigital from "@/images/lmDigital.png";
 import lucasBarbaPerfil from "@/images/barber1.png";
 import hostPerfil from "@/images/host1.png";
+import trilharPerfil from "@/images/futureProject1.png";
+
+export const projectById = (id) => {
+  const project = projectsFrontEnd.find((project) => Number(project.id) === Number(id)); // Garantir que ambos sejam números
+  console.log(project); 
+  return project;
+}
+
 
 export const projectsFrontEnd = [
+  {
+    id: 1,
+    name: "LD Tech",
+    date: "02 janeiro, 2024",
+    image: ldTechPerfil,
+    description:
+      "Projeto desenvolvido em Next.js, com o objetivo de criar 1 e-commerce, com sistema de login, cadastro, carrinho de compras, e sistema de pagamento. Utilizando Framework de desenvolvimento Next.js e gateway Stripe para pagamentos como stacks princípais.",
+    descriptionEn:" Project developed in Next.js, with the aim of creating an e-commerce, with login system, registration, shopping cart, and payment system. Using gateway Stripe for payments.",
+      link: "https://ldtech.netlify.app/",
+    github: "https://github.com/LucasDiello/Next-js-Ecommerce",
+  },
     {
-      id: 1,
+      id: 2,
       name: "Visualize já",
       image: hostPerfil,
       date: "14 fevereiro, 2024",
@@ -21,17 +40,6 @@ export const projectsFrontEnd = [
       descriptionEn:"The Rent now Project is an application for buying and displaying real estate, developed using the MERN stack (MongoDB, Express, React and Node.js). The application allows users to view, filter, chat with the owner of the property and negotiate as well as manage their accounts and preferences.",
       link: "https://visualizeja.vercel.app/",
       github: "https://github.com/LucasDiello/full-stack-hosting",
-    },
-    {
-      id: 2,
-      name: "LD Tech",
-      date: "02 janeiro, 2024",
-      image: ldTechPerfil,
-      description:
-        "Projeto desenvolvido em Next.js, com o objetivo de criar 1 e-commerce, com sistema de login, cadastro, carrinho de compras, e sistema de pagamento. Utilizando Framework de desenvolvimento Next.js e gateway Stripe para pagamentos como stacks princípais.",
-      descriptionEn:" Project developed in Next.js, with the aim of creating an e-commerce, with login system, registration, shopping cart, and payment system. Using gateway Stripe for payments.",
-        link: "https://ldtech.netlify.app/",
-      github: "https://github.com/LucasDiello/Next-js-Ecommerce",
     },
     {
       id: 3,
@@ -132,3 +140,34 @@ export const projectsFrontEnd = [
       github: "https://github.com/LucasDiello/trivia-redux-app",
     },
   ];
+
+
+export const futureProjects = [
+    {
+      id: 1,
+      name: "Encontre sua Trilha",
+      date: "12 dezembro, 2024",
+      description:
+        "Objetivo criar uma aplicação para encontrar trilhas ecológicas.",
+      image: trilharPerfil,
+      type: "Full Stack App",
+    },
+    {
+      id: 1,
+      name: "Encontre sua Trilha",
+      date: "12 dezembro, 2024",
+      description:
+        "Objetivo criar uma aplicação para encontrar trilhas ecológicas.",
+      image: trilharPerfil,
+      type: "Full Stack App",
+    },
+    {
+      id: 1,
+      name: "Encontre sua Trilha",
+      date: "12 dezembro, 2024",
+      description:
+        "Objetivo criar uma aplicação para encontrar trilhas ecológicas.",
+      image: trilharPerfil,
+      type: "Full Stack App",
+    },
+  ]

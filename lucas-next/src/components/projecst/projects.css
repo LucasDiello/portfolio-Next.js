@@ -3,3 +3,67 @@
 .font-oswald {
   font-family: 'Oswald', sans-serif;
 }
+
+.nine h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: white;
+}
+.nine h1 span {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #B0B0B0;
+  font-family: monospace;
+  word-spacing: 1px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.nine h1 span:after,
+.nine h1 span:before {
+  content: ' ';
+  display: block;
+  border-bottom: 1px solid #60a5fa ;
+  border-top: 1px solid #60a5fa ;
+  height: 5px;
+  width: 10rem;
+  background-color: inherit;
+}
+
+.active {
+  transition: all 0.3s ease;
+  background-color: #3b82f6;
+  color: white;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem ;
+  padding-bottom: 0.25rem; 
+  border-radius: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nine h1 {
+    font-size: 40px;
+  }
+
+  .nine h1 span {
+    font-size: 12px;
+  }
+
+  .nine h1 span:after,
+  .nine h1 span:before {
+    width: 3rem;
+  }
+
+}
