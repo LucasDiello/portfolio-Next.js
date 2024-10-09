@@ -13,7 +13,7 @@ export const Lang = () => {
     window.location.href = getPathname(newLang);
   };
   return (
-      <select value={lang} onChange={handleChange} className="border pr-3 text-xs bg-inherit text-white">
+      <select value={lang} onChange={handleChange} className="border font-mono pr-3 text-xs bg-inherit text-white">
         {locales.map((lng) => (
           <option key={lng.code} value={lng.code}>
             {lng.ico}

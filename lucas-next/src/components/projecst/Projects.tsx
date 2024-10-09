@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Perfil from '../perfil/Perfil';
-import { projectsFrontEnd } from '@/utils/utils';
+import { projectsFrontEnd } from '@/utils/index';
 import Image from 'next/image';
 import { CiClock2 } from 'react-icons/ci';
 import { DiGithub } from 'react-icons/di';
@@ -17,9 +17,9 @@ const Projects = () => {
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
 
   const currentProjects = projectsFrontEnd.slice(indexOfFirstProject, indexOfLastProject);
-  console.log(currentPage);
+
   return (
-    <section className="flex bg-[#222] flex-wrap">
+    <section className="flex  flex-wrap">
       <div className="w-full md:p-16 p-4 pt-12  lg:w-2/3">
         <div className="flex items-center justify-center">
           <div className="nine">
@@ -36,6 +36,7 @@ const Projects = () => {
                 <h3 className="mb-3 text-[28px] tracking-tighter ">
                   <a
                     href={project.link}
+                    target="_blank"
                     className="font-base font-oswald mt-4 text-3xl tracking-wide hover:text-blue-400"
                   >
                     {project.name}

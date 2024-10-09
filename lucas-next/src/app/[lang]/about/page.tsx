@@ -8,7 +8,7 @@ import { Barlow_Condensed } from 'next/font/google';
 export const barlow = Barlow_Condensed({ subsets: ['latin'], weight: '500' });
 const page = () => {
   return (
-    <main className="w-[60%] p-16">
+    <main className="md:w-[60%] md:p-16 p-4 pt-14">
       <div>
         <Image src={eu} alt="" className=" h-[450px] w-full object-cover object-top " />
       </div>
@@ -198,7 +198,7 @@ const page = () => {
           className="mt-4 flex w-full flex-col items-center justify-center space-y-4"
         >
           <input type="email" className="w-[80%] border-[1px] border-[#3f3d45] bg-inherit py-2" />
-          <button type="submit" className="w-[40%] bg-blue-500  px-4 py-2 font-mono text-sm">
+          <button  type="submit" className="w-[40%] bg-blue-500  px-4 py-2 font-mono text-sm">
             Enviar →
           </button>
         </form>

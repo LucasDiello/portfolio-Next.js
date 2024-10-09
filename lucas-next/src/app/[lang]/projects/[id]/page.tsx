@@ -12,11 +12,11 @@ const Page = () => {
   const project = projectById(id as string);
 
   return (
-    <div className='w-full p-16 pt-14'>
+    <div className='w-full md:p-16 p-4 pt-14'>
       <div>
         <Image src={project.image} alt="Elements" className="mb-3 h-[400px] w-[800px] rounded object-cover" />
       </div>
-      <div className="p-0 w-[70%]">
+      <div className="p-0 md:w-[70%]">
         <h1 className="mb-3 tracking-tighter font-oswald mt-4 text-4xl  ">
           <a
             href={project.link}

@@ -1,8 +1,8 @@
 import '../../styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Nav } from '@/components/Nav/Nav';
 import AsideLeft from '@/components/Aside-left/AsideLeft';
+import { Toaster } from 'react-hot-toast';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -13,7 +13,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
   return (
     <html lang={params.lang}>
-      <body className={`${inter.className} flex`}>
+      <body className={`${inter.className} flex bg-[#17161a]`}>
+        <Toaster   position="bottom-center"
+  reverseOrder={false}
+  />
         <AsideLeft />
         {children}
       </body>
