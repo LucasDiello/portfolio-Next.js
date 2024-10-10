@@ -3,10 +3,12 @@
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';  
 import toast from 'react-hot-toast';
+import emailjs from "@emailjs/browser";
 
 const Page = () => {  
   const route = useRouter();
   const [sending, setSending] = useState(false);
+
   const [formData, setFormData] = useState({  
     firstName: '',  
     lastName: '',  
@@ -22,6 +24,7 @@ const Page = () => {
       [name]: value,  
     });  
   };  
+
   const notify = () => {
     toast.custom((t) => (
       <div
@@ -66,12 +69,41 @@ const Page = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {  
     e.preventDefault();  
     setSending(true);
+    const { firstName, lastName, email, message } = formData;
+
+    if (!firstName || !lastName || !email || !message) {
+      toast.error("Preencha todos os campos.");
+      return;
+    }
+
+    const templateParams = {
+      from_name: firstName + " " + lastName,
+      message: message,
+      email: email,
+    };
+    emailjs
+      .send(
+        "service_lzlsbka",
+        "template_ocpy3y8",
+        templateParams,
+        "c7xOWKtXvM4FEGhYa"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Email Recebido! Logo entrarei em contato.");
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Erro ao enviar email. Tente novamente. :(");
+        }
+      )
     notify();
   };  
 
   return (  
-    <div className=' w-[60%] flex justify-center items-center'>
-        <div className='bg-[#1a191d] w-full ml-10  p-16 h-[80vh]'>
+    <div className=' md:w-[60%] flex justify-center items-center  p-4 md:p-0'>
+        <div className='bg-[#1a191d] w-full md:ml-10  md:p-16 p-4 pt-14 h-[80vh]'>
         <h1 className='font-oswald text-4xl tracking-wide'>Entre em contato comigo!</h1>  
         <form onSubmit={handleSubmit} className='grid grid-cols-2 gap-6 mt-10 w-full'>
   <div>  
@@ -133,7 +165,7 @@ const Page = () => {
       className='border-b-[1px] border-[#403c4b] placeholder-[#838383] bg-inherit  text-xs pt-2 pb-2 font-extralight w-full h-24'  
     />  
   </div>  
-        <button className='col-span-1 mt-10 inline-block bg-blue-500 w-44 py-4 font-mono text-sm text-white hover:bg-blue-600' type="submit">Enviar Mensagem</button>  
+        <button className='col-span-1 md:mt-10 inline-block bg-blue-500 w-44 py-4 font-mono text-sm text-white hover:bg-blue-600' type="submit">Enviar Mensagem</button>  
 </form>  
 
             </div>  

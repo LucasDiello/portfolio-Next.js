@@ -1,12 +1,106 @@
+"use client";
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import eu from '@/images/eu2.jpeg';
 import Link from 'next/link';
 import '../../../styles/globals.css';
 import { Barlow_Condensed } from 'next/font/google';
+import toast from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 
 export const barlow = Barlow_Condensed({ subsets: ['latin'], weight: '500' });
+
 const page = () => {
+  const [email, setEmail] = useState("");
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [countdown, setCountdown] = useState(10);
+  const notify = () => {
+    toast.custom((t) => (
+      <div
+        className={`${
+          t.visible ? 'animate-fade-in-up' : 'animate-fade-out-down'
+        } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+      >
+        <div className="flex-1 w-0 p-4">
+          <div className="flex items-start">
+            <div className="flex-shrink-0 pt-0.5">
+              <img
+                className="h-10 w-10 rounded-full"
+                src="https://cdn-icons-png.flaticon.com/512/725/725643.png"
+                alt="Email Icon"
+              />
+            </div>
+            <div className="ml-3 flex-1">
+              <p className="text-sm font-medium text-gray-900">
+                E-mail Enviado!
+              </p>
+              <p className="mt-1 text-sm text-gray-500">
+                Obrigado por entrar em contato. Retornarei em breve!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex border-l border-gray-200">
+          <button
+            onClick={() => {
+              toast.dismiss(t.id);
+            }}
+            className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            Fechar
+          </button>
+        </div>
+      </div>
+    ));
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {  
+    e.preventDefault();  
+
+    const templateParams = {
+      email: email,
+    };
+
+    if (!email || email === "" || email === " " || email === null) {
+      toast.error("Preencha todos os campos.");
+      return;
+    }
+    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+    if (!regex.test(email)) {
+      toast.error("E-mail inválido.");
+      return
+    }
+    
+    setIsDisabled(true);
+    emailjs
+      .send(
+        "service_lzlsbka",
+        "template_ocpy3y8",
+        templateParams,
+        "c7xOWKtXvM4FEGhYa"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Email Recebido! Logo entrarei em contato.");
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Erro ao enviar email. Tente novamente. :(");
+        }
+      )
+    notify();
+
+    const countdown = setInterval(() => {
+      setCountdown((prev) => prev - 1);
+    }, 1000);
+
+    setTimeout(() => {
+      setIsDisabled(false);
+      clearInterval(countdown);
+    }, 10000);
+  };  
   return (
     <main className="md:w-[60%] md:p-16 p-4 pt-14">
       <div>
@@ -191,15 +285,13 @@ const page = () => {
           Entre em contato comigo através do meu e-mail ou redes sociais.
         </p>
         <form
-          action="https
-        ://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;amp;id=a0a2c6d074"
-          method="post"
-          target="_blank"
           className="mt-4 flex w-full flex-col items-center justify-center space-y-4"
+          onSubmit={handleSubmit}
         >
-          <input type="email" className="w-[80%] border-[1px] border-[#3f3d45] bg-inherit py-2" />
-          <button  type="submit" className="w-[40%] bg-blue-500  px-4 py-2 font-mono text-sm">
-            Enviar →
+          <input onChange={(e) => setEmail(e.target.value) } type="email" className="w-[80%] border-[1px] border-[#3f3d45] bg-inherit py-2" />
+          <button disabled={isDisabled}  type="submit" className={`${isDisabled ? 'bg-gray-400' : 'bg-blue-500'
+} w-[40%]  px-4 py-2 font-mono text-sm`}>
+          {isDisabled ? `Aguarde... ${countdown}s` : 'Enviar →'}
           </button>
         </form>
       </div>
