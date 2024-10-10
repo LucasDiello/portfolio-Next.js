@@ -19,7 +19,7 @@ const Projects = () => {
   const currentProjects = projectsFrontEnd.slice(indexOfFirstProject, indexOfLastProject);
 
   return (
-    <section className="flex  flex-wrap">
+    <section className="flex  flex-wrap flex-col-reverse md:flex-row">
       <div className="w-full md:p-16 p-4 pt-12  lg:w-2/3">
         <div className="flex items-center justify-center">
           <div className="nine">
@@ -31,7 +31,7 @@ const Projects = () => {
         {currentProjects.map((project) => {
           return (
             <article key={project.id} className="mb-10">
-              <Image src={project.image} alt="Elements" className="mb-3 h-[380px] w-[800px] rounded object-cover" />
+              <Image src={project.image} alt="Elements" className="mb-3 md:h-[380px] w-[800px] rounded md:object-cover object-contain" />
               <div className="p-0">
                 <h3 className="mb-3 text-[28px] tracking-tighter ">
                   <a
