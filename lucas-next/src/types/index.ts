@@ -25,5 +25,12 @@ export type Project = {
     whatsNextEn?: string;
 } 
 
-// Criando um tipo que contém apenas o 'id'
+export type ProjectBackEnd = {
+    title: string;
+    tech: string;
+    description: string;
+    descriptionEn: string;
+    github: string;
+  };
+
 export type ProjectId = Pick<Project, 'id'>;

@@ -78,6 +78,9 @@ const Page = () => {
               </div>
             ))} 
           </div>
+          <div>
+            <p className="text-[#B0B0B0] text-sm font-light mt-4">Caso queira acessar a aplicação, acesse o <a href={ project.link } className="text-blue-400">link</a> do projeto.</p>
+          </div>
         </div>
           }
         <div>
@@ -88,6 +91,9 @@ const Page = () => {
         <div>
           <Link href="/" className="mt-5 inline-block bg-blue-500 px-4 py-2 font-mono text-sm text-white hover:underline">
             Voltar
+          </Link>
+          <Link target='_blank' href={project.link} className="mt-5 ml-5 inline-block bg-blue-500 px-4 py-2 font-mono text-sm text-white hover:underline">
+            Acessar site
           </Link>
         </div>
       </div>
