@@ -4,10 +4,12 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';  
 import toast from 'react-hot-toast';
 import emailjs from "@emailjs/browser";
+import { useDictionary } from '@/app/context/DictionaryContext';
 
 const Page = () => {  
   const route = useRouter();
   const [sending, setSending] = useState(false);
+  const { translation } = useDictionary();
 
   const [formData, setFormData] = useState({  
     firstName: '',  
@@ -104,10 +106,10 @@ const Page = () => {
   return (  
     <div className=' md:w-[60%] flex justify-center items-center  p-4 md:p-0'>
         <div className='bg-[#1a191d] w-full md:ml-10  md:p-16 p-4 pt-14 h-[80vh]'>
-        <h1 className='font-oswald text-4xl tracking-wide'>Entre em contato comigo!</h1>  
+        <h1 className='font-oswald text-4xl tracking-wide'>{translation.contact_me}</h1>  
         <form onSubmit={handleSubmit} className='grid grid-cols-2 gap-6 mt-10 w-full'>
   <div>  
-    <label className='block text-sm font-extralight text-[#B0B0B0]'>Nome</label>  
+    <label className='block text-sm font-extralight text-[#B0B0B0]'>{translation.name}</label>  
     <input  
       type="text"  
       name="firstName"  
@@ -119,7 +121,7 @@ const Page = () => {
     />  
   </div>  
   <div>  
-    <label className='block text-sm font-extralight text-[#B0B0B0]'>Sobrenome</label>  
+    <label className='block text-sm font-extralight text-[#B0B0B0]'>{translation.lastname}</label>  
     <input  
       type="text"  
       name="lastName"  
@@ -131,7 +133,7 @@ const Page = () => {
     />  
   </div>  
   <div>  
-    <label className='block text-sm font-extralight text-[#B0B0B0]'>Email </label>  
+    <label className='block text-sm font-extralight text-[#B0B0B0]'>{translation.email}</label>  
     <input  
       type="email"  
       name="email"  
@@ -150,22 +152,22 @@ const Page = () => {
       value={formData.subject}  
       onChange={handleChange}  
       required
-      placeholder='Dicas | Contrato | Parceria'
+      placeholder={translation.placeholder_subject}
       className='border-b-[1px] border-[#403c4b] bg-inherit placeholder-[#838383] text-xs pt-2 pb-2 font-extralight w-full'  
     />  
   </div>  
   <div className='col-span-2'>  
-    <label className='block text-sm font-extralight text-[#B0B0B0]'>Mensagem</label>  
+    <label className='block text-sm font-extralight text-[#B0B0B0]'>{translation.message}</label>  
     <textarea  
       name="message"  
       value={formData.message}  
       onChange={handleChange}  
       required
-      placeholder='Olá, gostaria de saber mais sobre o seu trabalho.'
+      placeholder={translation.placeholder_message}
       className='border-b-[1px] border-[#403c4b] placeholder-[#838383] bg-inherit  text-xs pt-2 pb-2 font-extralight w-full h-24'  
     />  
   </div>  
-        <button className='col-span-1 md:mt-10 inline-block bg-blue-500 w-44 py-4 font-mono text-sm text-white hover:bg-blue-600' type="submit">Enviar Mensagem</button>  
+        <button className='col-span-1 md:mt-10 inline-block bg-blue-500 w-44 py-4 font-mono text-sm text-white hover:bg-blue-600' type="submit">{translation.send}</button>  
 </form>  
 
             </div>  

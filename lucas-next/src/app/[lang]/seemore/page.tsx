@@ -1,8 +1,12 @@
+"use client";
 import React from 'react';
 import { projectsBackEnd } from '@/utils';
 import Link from 'next/link';
+import { useDictionary } from '@/app/context/DictionaryContext';
 
 const page = () => {
+  const { translation, lang } = useDictionary();
+
   return (
     <section className="md:p-16 p-4 w-full lg:w-[80%] mx-auto">
       <div className="flex flex-col items-center justify-center">
@@ -22,11 +26,10 @@ const page = () => {
           >
             {project.title}
           </a>
-         <p className="text-sm font-semibold text-gray-400 mb-2">{project.tech}</p>
         </h1>             
-              <p className="text-sm font-light text-[#B0B0B0] mb-4">{project.description}</p>
+              <p className="text-sm font-light text-[#B0B0B0] mb-4">{lang === "pt-BR" ? project.description : project.descriptionEn}</p>
               <Link target='_blank' href={project.github} className=" inline-block bg-blue-500 px-4 py-2 font-mono text-xs text-white hover:underline">
-                Ver no Github
+            {translation.view_in_github}
           </Link>
             </div>
           ))}

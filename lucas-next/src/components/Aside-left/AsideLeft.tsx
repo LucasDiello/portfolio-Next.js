@@ -6,10 +6,12 @@ import "./asideLeft.css"
 import Link from 'next/link'
 import { BiMenu } from 'react-icons/bi'
 import { usePathname } from 'next/navigation'
+import { useDictionary } from '@/app/context/DictionaryContext';
 
 const AsideLeft = () => {
     const [isOpen, setIsOpen] = React.useState(false)
     const pathname = usePathname(); // Hook para pegar o pathname atual
+    const { translation } = useDictionary();
     
     return (
     <aside className='min-h-[100vh] max-w-[300px]'>
@@ -27,16 +29,16 @@ const AsideLeft = () => {
             </h1>
             <ul className='font-oswald space-y-5 text-xl tracking-widest font-light'>
                 <li onClick={() => setIsOpen(false)} className={`${pathname === '/' ? 'text-blue-400 ' : 'hover:text-blue-400 hover:font-bold'}`}>
-                    <Link href="/">Home</Link>
+                    <Link href="/">{translation.home}</Link>
                 </li>
                 <li onClick={() => setIsOpen(false)} className={`${pathname === '/about' ? 'text-blue-400 ' : 'hover:text-blue-400 hover:font-bold'}`}>
-                    <Link href="/about">Sobre</Link>
+                    <Link href="/about">{translation.about}</Link>
                 </li>
                 <li onClick={() => setIsOpen(false)} className={`${pathname === '/seemore' ? 'text-blue-400' : 'hover:text-blue-400 hover:font-bold'}`}>
-                    <Link href="/seemore">Ver Mais</Link>
+                    <Link href="/seemore">{translation.backend}</Link>
                 </li>
                 <li onClick={() => setIsOpen(false)} className={`${pathname === '/contact' ? 'text-blue-400' : 'hover:text-blue-400 hover:font-bold'}`}>
-                    <Link href="/contact">Contate-Me</Link>
+                    <Link href="/contact">{translation.contact}</Link>
                 </li>
                 <Nav />
             </ul>

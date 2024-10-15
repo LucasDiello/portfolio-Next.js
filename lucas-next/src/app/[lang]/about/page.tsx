@@ -7,6 +7,7 @@ import '../../../styles/globals.css';
 import { Barlow_Condensed } from 'next/font/google';
 import toast from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
+import { useDictionary } from '@/app/context/DictionaryContext';
 
 export const barlow = Barlow_Condensed({ subsets: ['latin'], weight: '500' });
 
@@ -14,6 +15,8 @@ const page = () => {
   const [email, setEmail] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
   const [countdown, setCountdown] = useState(10);
+  const { translation, lang } = useDictionary();
+
   const notify = () => {
     toast.custom((t) => (
       <div
@@ -101,6 +104,123 @@ const page = () => {
       clearInterval(countdown);
     }, 10000);
   };  
+
+   type Skill = {
+    title: string;
+    titleEn: string;
+    items: {
+      name: string;
+      description: string;
+      descriptionEN: string;
+      subItems?: { name: string, 
+        nameEn: string
+       }[];
+      link?: string;
+    }[];
+  }[];
+
+  const skillsAndExperience : Skill = [
+    {
+      title: "Tecnologias e Habilidades",
+      titleEn: "Technologies and Skills",
+      items: [
+        { name: "JavaScript", description: "Linguagem de programação interpretada.", descriptionEN: "Interpreted programming language." },
+        { name: "React.js", description: "Biblioteca para construção de interfaces de usuário.", descriptionEN: "Library for building user interfaces." },
+        { name: "Next.js", description: "Framework de React.", descriptionEN: "React framework." },
+        { name: "HTML", description: "Linguagem de marcação de hipertexto.", descriptionEN: "Hypertext Markup Language." },
+        { name: "CSS", description: "Folhas de estilo em cascata.", descriptionEN: "Cascading Style Sheets." },
+        { name: "Tailwind", description: "Framework CSS utilitário.", descriptionEN: "Utility-first CSS framework." },
+        { name: "Node.js", description: "Ambiente de execução JavaScript.", descriptionEN: "JavaScript runtime environment." },
+        { name: "Express", description: "Framework minimalista para Node.js.", descriptionEN: "Minimalist framework for Node.js." },
+        { name: "MongoDB", description: "Banco de dados NoSQL.", descriptionEN: "NoSQL database." },
+        { name: "Prisma", description: "ORM para Node.js.", descriptionEN: "ORM for Node.js." },
+        { name: "MySQL", description: "Banco de dados relacional.", descriptionEN: "Relational database." },
+        { name: "TypeScript", description: "Superset de JavaScript com tipagem estática.", descriptionEN: "Superset of JavaScript with static typing." },
+        { name: "Java Spring Boot", description: "Framework para desenvolvimento de aplicações em Java.", descriptionEN: "Framework for Java application development." },
+        { name: "Jest/RTL", description: "Testes unitários e de integração.", descriptionEN: "Unit and integration testing." },
+      ],
+    },
+    {
+      title: "Ferramentas",
+      titleEn: "Tools",
+      items: [
+        { name: "Git", description: "Controle de versão.", descriptionEN: "Version control." },
+        { name: "GitHub", description: "Plataforma de hospedagem de código.", descriptionEN: "Code hosting platform." },
+        { name: "Scrum", description: "Metodologia ágil para desenvolvimento de software.", descriptionEN: "Agile software development methodology." },
+        { name: "SEO", description: "Otimização de mecanismos de busca.", descriptionEN: "Search engine optimization." },
+      ],
+    },
+    {
+      title: "Compêtencias Pessoais",
+      titleEn: "Personal Skills",
+      items: [
+        { name: "Desenvolvimento de sites", description: "Construção de sites responsivos e acessíveis.", descriptionEN: "Building responsive and accessible websites." },
+        { name: "Básico de SOLID/Clean Code", description: "Princípios de desenvolvimento de software.", descriptionEN: "Software development principles." },
+        { name: "Adaptável", description: "Capacidade de se ajustar a diferentes contextos e desafios.", descriptionEN: "Ability to adapt to different contexts and challenges." },
+        { name: "Comunicativo", description: "Habilidade de transmitir informações de forma clara.", descriptionEN: "Ability to convey information clearly." },
+        { name: "Empático", description: "Capacidade de se colocar no lugar dos outros.", descriptionEN: "Ability to empathize with others." },
+        { name: "Aceito feedbacks", description: "Aberto a críticas construtivas.", descriptionEN: "Open to constructive feedback." },
+        { name: "Trabalho em equipe", description: "Colaborativo e comprometido com o sucesso do time.", descriptionEN: "Collaborative and committed to team success." },
+        { name: "Proativo", description: "Iniciativa para resolver problemas de forma eficiente.", descriptionEN: "Proactive in solving problems efficiently." },
+      ],
+    },
+    {
+      title: "Experiência Profissional",
+      titleEn: "Professional Experience",
+      items: [
+        {
+          name: "Desenvolvedor Full Stack",
+          description: "Freelancer",
+          descriptionEN: "Freelancer",
+          subItems: [
+            { name: "Desenvolvimento de ERP com equipe metodologia ágil scrum", nameEn: "ERP development with an agile scrum team." },
+            { name: "Desenvolvimento de interfaces de usuário com React.js e Next.js.", nameEn: "User interface development with React.js and Next.js." },
+            { name: "Manutenção de aplicações web.", nameEn: "Maintenance of web applications." },
+            { name: "Desenvolvimento de API com Node.js e Express.", nameEn: "API development with Node.js and Express." },
+            { name: "Integração de aplicações com banco de dados SQL e NoSQL.", nameEn: "Integration of applications with SQL and NoSQL databases." },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Formação Acadêmica",
+      titleEn: "Academic Education",
+      items: [
+        {
+          name: "Desenvolvimento Full Stack +1500hrs",
+          description: "Esc. de tecnologia Trybe",
+          descriptionEN: "Trybe Tech School",
+          link: "https://www.credential.net/4302bfcf-2fda-46cb-aa9e-4a8402991180#gs.ghlo1f",
+        },
+        {
+          name: "Formação Eletiva em Java +150hrs",
+          description: "Esc. de tecnologia Trybe",
+          descriptionEN: "Trybe Tech School",
+          link: "https://www.credential.net/fec44b02-e08e-4d61-967a-9735e4a11e96#gs.g0fibt",
+        },
+        {
+          name: "Implante na AWS c. Spring Boot",
+          description: "Esc. de tecnologia Udemy",
+          descriptionEN: "AWS Deployment with Spring Boot",
+          link: "https://www.udemy.com/certificate/UC-f5d9aaa6-f2b7-4eb9-b516-ab4a55a8cd0a/",
+        },
+      ],
+    },
+    {
+      title: "Idiomas",
+      titleEn: "Languages",
+      items: [
+        {
+          name: "Inglês",
+          description: "Intermediário",
+          descriptionEN: "Intermediate",
+        },
+      ],
+    },
+  ];
+  
+  
+
   return (
     <main className="md:w-[60%] md:p-16 p-4 pt-14">
       <div>
@@ -108,181 +228,45 @@ const page = () => {
       </div>
       <div className="mt-5">
         <h1 className={`font-oswald text-4xl tracking-wide`}>
-          Me chamo Lucas Diello, tenho 22 anos e sou desenvolvedor de software.
+        {translation.about_me_description2}
         </h1>
         <p className="mt-5 text-sm font-light text-[#B0B0B0]">
-          Atualmente estou há 2 anos na área de desenvolvimento de software, com conhecimento parcial tanto no Front End
-          como também no Back End. Meu interesse pela tecnologia começou desde a infância, acabava sempre indo em lan
-          houses e desmontando computadores (mesmo sem saber o que estava fazendo). Com o passar do tempo, acabei me
-          interessando por programação e comecei a estudar sozinho, até que decidi realmente me aprofundar na área e
-          cair de cabeça em cursos e projetos. Hoje em dia, estou sempre em busca de novos conhecimentos e desafios,
-          para que eu possa me tornar um desenvolvedor cada vez melhor. Atuando como freelancer, estou sempre disposto a
-          ajudar e a aprender com os projetos que me são propostos. Estou ansioso para minha próxima oportunidade de
-          trabalho, e espero que possa através dela, contribuir com o crescimento da empresa e também com o meu próprio
-          crescimento profissional.
+         {translation.about_me_text1}
         </p>
       </div>
-      {/* Faça um grid de tecnologias que possuo conhecimento e habilidades pessoais. */}
-      <div>
-        <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
-          Tecnologias e Habilidades
-        </h2>
-        <ul className="mt-4 grid grid-cols-2 gap-4 text-sm font-light text-[#B0B0B0]">
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">JavaScript</h2> - Linguagem de programação interpretada.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">React.js</h2> - Biblioteca para construção de interfaces de usuário.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">Next.js</h2> - Framework de React.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">HTML</h2> - Linguagem de marcação de hipertexto.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">CSS</h2> - Folhas de estilo em cascata.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">Tailwind</h2> - Framework CSS utilitário.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">Node.js</h2> - Ambiente de execução JavaScript.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">Express</h2> - Framework minimalista para Node.js.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">MongoDB</h2> - Banco de dados NoSQL.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">Prisma</h2> - ORM para Node.js.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">MySQL</h2> - Banco de dados relacional.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">TypeScript</h2> - Superset de JavaScript com tipagem estática.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">Java Spring Boot</h2> - Framework para desenvolvimento de aplicações em Java.
-  </li>
-  <li>
-    <h2 className="pb-1 pt-1 font-bold text-white font-mono">Jest/RTL</h2> - Testes unitários e de integração.
-  </li>
-</ul>
-
-
-        {/* Ferramentas e Metodologias */}
-        <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
-          Ferramentas
-        </h2>
-        <ul className="mt-4 grid grid-cols-2 gap-4 text-sm font-light text-[#B0B0B0]">
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Git</h2> - Controle de versão.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">GitHub</h2> - Plataforma de hospedagem de código.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Scrum</h2> - Metodologia ágil para desenvolvimento de software.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">SEO</h2> - Otimização de mecanismos de busca.
-          </li>
-        </ul>
-
-        {/* Habilidades pessoais */}
-        <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
-          Compêtencias Pessoais!
-        </h2>
-        <ul className="mt-4 grid grid-cols-2 gap-4 text-sm font-light text-[#B0B0B0]">
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Desenvolvimento de sites</h2>- Construção de sites responsivos e
-            acessíveis.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Básico de SOLID/Clean Code</h2>- Princípios de desenvolvimento de
-            software.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Adaptável</h2> - Capacidade de se ajustar a diferentes contextos e
-            desafios.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Comunicativo</h2> - Habilidade de transmitir informações de forma
-            clara.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Empático</h2> - Capacidade de se colocar no lugar dos outros.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Aceito feedbacks</h2> - Aberto a críticas construtivas.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Trabalho em equipe</h2> - Colaborativo e comprometido com o sucesso do
-            time.
-          </li>
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-mono font-bold">Proativo</h2> - Iniciativa para resolver problemas de forma eficiente.
-          </li>
-        </ul>
-      </div>
-      {
-        // Experiência Profissional com lista de seus feitos e realizações.
-      }
-      <div>
-        <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
-          Experiência Profissional
-        </h2>
-        <ul className="mt-4 text-sm font-light text-[#B0B0B0]">
-          <li>
-            <h2 className="pb-1 pt-1 text-white font-bold">Desenvolvedor Full Stack</h2> Freelancer
-            <ul className="mt-4 text-sm font-light text-[#B0B0B0]">
-              <li>- Desenvolvimento de ERP com equipe utilizando metodologia ágil scrum</li>
-              <li>- Desenvolvimento de interfaces de usuário com React.js e Next.js.</li>
-              <li>- Manutenção de aplicações web.</li>
-              <li>- Desenvolvimento de api com Node.js e Express</li>
-              <li>- Integração de aplicações com banco de dados SQL e NoSQL</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
-          Formação Acadêmica
-        </h2>
-        <ul className="mt-4 text-sm font-light flex flex-col gap-4 text-[#B0B0B0]">
-          <li className='flex flex-col '>
-            <h2 className="pb-1 pt-1 text-white font-bold">Desenvolvimento Full Stack +1500hrs</h2> - (Esc. de tecnologia Trybe)  <a href="" target='_blank' className=' underline'>certificado</a>
-          </li>
-          <li className='flex flex-col'>
-            <h2 className="pb-1 pt-1 text-white font-bold">Formação Eletiva em Java +150hrs</h2> - (Esc. de tecnologia Trybe)  <a href="https://www.credential.net/fec44b02-e08e-4d61-967a-9735e4a11e96#gs.g0fibt" target='_blank' className=' underline'>certificado</a>
-          </li>
-          <li className='flex flex-col'>
-            <h2 className="pb-1 pt-1 text-white font-bold">Implante na AWS c. Spring Boot</h2> - (Esc. de tecnologia Udemy) <a href="" target='_blank' className=' underline'>certificado</a>
-          </li>
-        </ul>
-
-      </div>
-      <div>
-        <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
-          Idiomas
-        </h2>
-        <ul className="mt-4 text-sm font-light flex flex-col gap-4 text-[#B0B0B0]">
-          <li className='flex flex-col '>
-            <h2 className="pb-1 pt-1 text-white font-bold">Inglês</h2> - Intermediário
-          </li>
-        </ul>
-      </div>
-
-      
+      {skillsAndExperience.map((section) => (
+        <div key={section.title}>
+          <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
+            {lang === "pt-BR" ? section.title : section.titleEn}
+          </h2>
+          <ul className={`mt-4 grid grid-cols-2 gap-4 text-sm font-light text-[#B0B0B0]`}>
+            {section.items.map((item) => (
+              <li key={item.name}>
+                <h2 className="pb-1 pt-1 text-white font-bold">{item.name}</h2>
+                <p>{lang === "pt-BR" ? item.description : item.descriptionEN}</p>
+                {item.subItems && (
+                  <ul>
+                    {item.subItems.map((subItem) => (
+                      <li className=' w-[600px]' key={subItem.name}>{lang === "pt-BR" ? subItem.name : subItem.nameEn}</li>
+                    ))}
+                  </ul>
+                )}
+                {item.link && ( 
+                  <a href={item.link} target="_blank" className="underline">
+                    Certificado
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
       <div className="mt-5">
         <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
-          Contato Rápido!
+          {translation.fast_contact}!
         </h2>
         <p className="mt-4 text-sm font-light text-[#B0B0B0]">
-          Entre em contato comigo através do meu e-mail ou redes sociais.
+          {translation.fast_quick_contact}
         </p>
         <form
           className="mt-4 flex w-full flex-col items-center justify-center space-y-4"

@@ -4,12 +4,14 @@ interface Tech {
     id: number;
     name: string;
     description: string;
+    descriptionEn: string;
 }
 
 export type Project = {
     id: number;
     name: string;
     date: string;
+    dateEn: string;
     image: StaticImageData;
     images?: StaticImageData[];
     description: string;
@@ -27,7 +29,6 @@ export type Project = {
 
 export type ProjectBackEnd = {
     title: string;
-    tech: string;
     description: string;
     descriptionEn: string;
     github: string;

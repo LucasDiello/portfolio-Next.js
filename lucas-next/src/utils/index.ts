@@ -9,6 +9,7 @@ import lmDigital from "@/images/lmDigital/lmDigital.png";
 import lucasBarbaPerfil from "@/images/barber/barber1.png";
 import hostPerfil from "@/images/host/host1.png";
 import trilharPerfil from "@/images/futureProject1.png";
+import marketingDigitalPerfil from "@/images/futureProject2.png";
 import { Project, ProjectBackEnd } from "@/types/index";
 import {ldtech, ldtech1, ldtech2, ldtech3, ldtech4, ldtech5, ldtech6, ldtech7, ldtech8, ldtech9 } from "@/images/tech_ecommerce";
 import { host1, host10, host2, host3, host4, host5, host6, host7, host8, host9 } from "@/images/host";
@@ -21,8 +22,8 @@ import { bytebuy1, bytebuy2, bytebuy3, bytebuy4 } from "@/images/bytebuy";
 import { trivia1, trivia2, trivia3, trivia4 } from "@/images/trivia";
 
 
-export const projectById = (id : string) : Project => {
-  const project = projectsFrontEnd.find((project) => Number(project.id) === Number(id)); // Garantir que ambos sejam números
+export const projectById = (id : string) : Project  => {
+  const project = projectsFrontEnd.find((project) => Number(project.id) === Number(id));
   return project as Project;
 }
 
@@ -31,6 +32,7 @@ export const projectsFrontEnd : Project[] = [
     id: 1,
     name: "Ecommerce",
     date: "02 janeiro, 2024",
+    dateEn: "January 02, 2024",
     image: ldtech,
     images: [ldtech1,ldtech2,ldtech3,ldtech4,ldtech5,ldtech6,ldtech7,ldtech8,ldtech9],
     description:
@@ -43,31 +45,37 @@ export const projectsFrontEnd : Project[] = [
         id: 1,
         name: "Next.js",
         description: "Framework de desenvolvimento",
+        descriptionEn: "Development framework",
       },
       {
         id: 2,
         name: "Tailwind",
         description: "Framework de estilização",
+        descriptionEn: "Styling framework",
       },
       {
         id: 3,
         name: "Stripe",
         description: "Gateway de pagamento",
+        descriptionEn: "Payment gateway",
       },
       {
         id: 4,
         name: "React",
         description: "Biblioteca de desenvolvimento",
+        descriptionEn: "Development library",
       },
       {
         id: 5,
         name: "TypeScript",
         description: "Linguagem de programação tipada",
+        descriptionEn: "Typed programming language",
       },
       {
         id: 6,
         name: "Material UI",
         description: "Framework de componentes reutilizáveis",
+        descriptionEn: "Reusable components framework",
       },
     ],
     whatILearned:
@@ -89,6 +97,7 @@ export const projectsFrontEnd : Project[] = [
       image: hostPerfil,
       images: [host2, host3, host4, host5, host6, host7, host8, host9, host10],
       date: "14 fevereiro, 2024",
+      dateEn: "February 14, 2024",
       description:
       "Uma aplicação para compra e exposição de imóveis, desenvolvida utilizando a stack MERN (MongoDB, Express, React e Node.js). A aplicação permite que os usuários visualizem, verifique diferença locacional sua e do imóvel, visualizem os detalhes do imóvel, filtrem, publiquem imóveis, conversem com o dono do imóveis e negociem entre si.",
       descriptionEn:"The Rent now Project is an application for buying and displaying real estate, developed using the MERN stack (MongoDB, Express, React and Node.js). The application allows users to view, filter, chat with the owner of the property and negotiate as well as manage their accounts and preferences.",
@@ -99,56 +108,67 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "MongoDB",
           description: "Banco de dados não relacional",
+          descriptionEn: "Non-relational database",
         },
         {
           id: 2,
           name: "Express",
           description: "Framework de desenvolvimento",
+          descriptionEn: "Development framework",
         },
         {
           id: 3,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 4,
           name: "Node.js",
           description: "Ambiente de execução",
+          descriptionEn: "Execution environment",
         },
         {
           id: 5,
           name: "TypeScript",
           description: "Linguagem de programação tipada",
+          descriptionEn: "Typed programming language",
         },
         {
           id: 6,
           name: "Prisma",
           description: "ORM para Node.js e TypeScript",
+          descriptionEn: "ORM for Node.js and TypeScript",
         },
         {
           id: 7,
           name: "Socket.io",
-          description: "Biblioteca para comunicação em tempo real",
+          description: "Biblioteca para comunicação em tempo real", 
+          descriptionEn: "Library for real-time communication",
         },
         {
           id: 8,
           name: "JWT",
           description: "Sistema de autenticação",
+          descriptionEn: "Authentication system",
         },
         {
           id: 9,
           name: "NodeMailer",
           description: "Biblioteca para envio de e-mails",
+          descriptionEn: "Library for sending emails",
         },
         {
           id: 10,
           name: "Leaflet",
           description: "Biblioteca de mapas interativos",
+          descriptionEn: "Interactive maps library",
         },
         {
           id: 11,
           name: "Cloudinary",
           description: "Plataforma de armazenamento de imagens",
+          descriptionEn: "Image storage platform",
         }
       ],
       whatILearned:
@@ -166,6 +186,7 @@ export const projectsFrontEnd : Project[] = [
       name: "Restaurant Borcelle",
       images: [restaurant1, restaurant2, restaurant3, restaurant4, restaurant5, restaurant6, restaurant7, restaurant8, restaurant9],
       date: "27 junho, 2023",
+      dateEn: "June 27, 2023",
       image: restaurantPerfil,
       description:
         "Projeto desenvolvido em React, com o intuito de criar uma aplicação de um restaurante, com uma inteface agradável, para que o usuário possa conhecer o ambiente, o cardápio, fazer reservas, e ver informações sobre o restaurante.",
@@ -177,16 +198,19 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 2,
           name: "React hooks",
           description: "Sistema de gerenciamento de estado",
+          descriptionEn: "State management system",
         },
         {
           id: 3,
           name: "CSS3",
           description: "Estilização",
+          descriptionEn: "Styling",
         }
       ],
       whatILearned:
@@ -203,6 +227,7 @@ export const projectsFrontEnd : Project[] = [
       image: recipesPerfil,
       images : [recipes1, recipes2, recipes3, recipes4, recipes5, recipes6, recipes7],
       date: "12 março, 2023",
+      dateEn: "March 12, 2023",
       description:
         "Esta aplicação foi desenvolvida em 1 time de devs, com o objetivo de criar um aplicativo de receitas para responsividade mobile, onde é possível ver, filtrar, comentar as receitas, criar sua receita, realizar uma receita, favoritar receitas entre várias outras opções com o sistema crud. Caso queira ver mais sobre o projeto, acesse o link do github. ou o link do projeto.",
       descriptionEn:" This project was created in a group of devs, with the aim of creating a recipe app, where you can view, filter and favorite recipes, as well as create, edit and delete recipes. If you want to see more about the project, access the github link. or the project link.",
@@ -213,26 +238,31 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 2,
           name: "React hooks",
           description: "Sistema de gerenciamento de estado",
+          descriptionEn: "State management system",
         },
         {
           id: 3,
           name: "CSS3",
           description: "Estilização",
+          descriptionEn: "Styling",
         },
         {
           id: 4,
           name: "Node.js",
           description: "Ambiente de execução",
+          descriptionEn: "Execution environment",
         },
         {
           id: 5,
           name: "server json",
           description: "Servidor de dados local",
+          descriptionEn: "Local data server",
         }
       ],
       whatILearned:
@@ -248,6 +278,7 @@ export const projectsFrontEnd : Project[] = [
       id: 5,
       name: "Mecânica",
       date: "12 março, 2023",
+      dateEn: "March 12, 2023",
       image: ldmechanics1,
       images: [ldmechanics1, ldmechanics2, ldmechanics3, ldmechanics4, ldmechanics5],
       description:
@@ -260,16 +291,19 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 2,
           name: "React hooks",
           description: "Sistema de gerenciamento de estado",
+          descriptionEn: "State management system",
         },
         {
           id: 3,
           name: "CSS3",
           description: "Estilização",
+          descriptionEn: "Styling",
         },
       ],
       whatILearned:
@@ -285,6 +319,7 @@ export const projectsFrontEnd : Project[] = [
       id:6,
       name: "Barbearia",
       date: "12 março, 2023",
+      dateEn: "March 12, 2023",
       image: barber1,
       images: [barber1, barber2, barber3, barber4, barber5, barber6],
       description: "Projeto desenvolvido em React para criar um site de barbearia com uma interface amigável e moderna. A plataforma permite que os usuários explorem o ambiente, conheçam os serviços oferecidos, façam agendamentos online de forma simples e prática, além de acessar todas as informações relevantes sobre a barbearia, como localização e horário de funcionamento.",
@@ -296,16 +331,19 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 2,
           name: "React hooks",
           description: "Sistema de gerenciamento de estado",
+          descriptionEn: "State management system",
         },
         {
           id: 3,
           name: "CSS3",
           description: "Estilização",
+          descriptionEn: "Styling",
         },
       ],
       whatILearned:
@@ -323,6 +361,7 @@ export const projectsFrontEnd : Project[] = [
       id: 7,
       name: "LM Digital",
       date: "12 março, 2023",
+      dateEn: "March 12, 2023",
       image: lmDigital1,
       images: [lmDigital1, lmDigital2, lmDigital3, lmDigital4, lmDigital5, lmDigital6, lmDigital7],
       description:
@@ -335,16 +374,19 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 2,
           name: "React hooks",
           description: "Sistema de gerenciamento de estado",
+          descriptionEn: "State management system",
         },
         {
           id: 3,
           name: "CSS3",
           description: "Estilização",
+          descriptionEn: "Styling",
         },
       ],
       whatILearned:
@@ -360,6 +402,7 @@ export const projectsFrontEnd : Project[] = [
       id: 8,
       name: "ByteBuy",
         date: "12 março, 2023",
+        dateEn: "March 12, 2023",
       image: bytebuy3,
       images: [bytebuy1, bytebuy2, bytebuy3, bytebuy4],
       description:
@@ -372,16 +415,19 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 2,
           name: "React hooks",
           description: "Sistema de gerenciamento de estado",
+          descriptionEn: "State management system",
         },
         {
           id: 3,
           name: "CSS3",
           description: "Estilização",
+          descriptionEn: "Styling",
         },
       ],
       whatILearned:
@@ -392,9 +438,10 @@ export const projectsFrontEnd : Project[] = [
       whatIdDoDifferentlyEn: "  I would implement a product search system to make site navigation easier and a product review system where customers could leave their opinions and rate purchased products, enriching user interaction with the platform.",  
     },
     {
-      id: 10,
+      id: 9,
       name: "Wallet App",
         date: "12 março, 2023",
+        dateEn: "March 12, 2023",
       image: walletPerfil,
       description:
         "Projeto utilizando Redux, com o objetivo de criar uma carteira de controle de gastos, onde é possível adicionar, remover e editar gastos, além de poder ver o total de gastos e o total de gastos por categoria.",
@@ -406,21 +453,25 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 2,
-          name: "Redux",
-          description: "Biblioteca de gerenciamento de estado",
+          name: "React hooks",
+          description: "Sistema de gerenciamento de estado",
+          descriptionEn: "State management system",
         },
         {
           id: 3,
           name: "CSS3",
           description: "Estilização",
+          descriptionEn: "Styling",
         },
         {
           id: 4,
-          name: "React hooks",
-          description: "Sistema de gerenciamento de estado",
+          name: "Redux",
+          description: "Biblioteca de gerenciamento de estado",
+          descriptionEn: "State management library",
         },
       ],
       whatILearned:
@@ -437,9 +488,10 @@ export const projectsFrontEnd : Project[] = [
         "I intend to improve the application interface by adding charts and reports for expense visualization, as well as implementing a user login and registration system to ensure data security and privacy.",
     },
     {
-      id: 11,
+      id: 10,
       name: "Trivia",
       date: "12 março, 2023",
+      dateEn: "March 12, 2023",
       image: triviaPerfil,
       images: [trivia1, trivia2, trivia3, trivia4],
       description:
@@ -452,21 +504,25 @@ export const projectsFrontEnd : Project[] = [
           id: 1,
           name: "React",
           description: "Biblioteca de desenvolvimento",
+          descriptionEn: "Development library",
         },
         {
           id: 2,
           name: "Redux",
           description: "Biblioteca de gerenciamento de estado",
+          descriptionEn: "State management library",
         },
         {
           id: 3,
           name: "CSS3",
           description: "Estilização",
+          descriptionEn: "Styling",
         },
         {
           id: 4,
           name: "React hooks",
           description: "Sistema de gerenciamento de estado",
+          descriptionEn: "State management system",
         },
       ],
       whatILearned:
@@ -496,33 +552,24 @@ export const futureProjects = [
       name: "Encontre sua Trilha",
       date: "12 dezembro, 2024",
       description:
-        "Objetivo criar uma aplicação para encontrar trilhas ecológicas.",
-      image: trilharPerfil,
+        "Agência de marketing digital. Com o objetivo de criar uma aplicação para gerenciar campanhas de marketing digital.",
+      image: marketingDigitalPerfil,
       type: "Full Stack App",
-    },
-    {
-      id: 1,
-      name: "Encontre sua Trilha",
-      date: "12 dezembro, 2024",
-      description:
-        "Objetivo criar uma aplicação para encontrar trilhas ecológicas.",
-      image: trilharPerfil,
-      type: "Full Stack App",
-    },
+    }
   ]
 
 export const projectsBackEnd : ProjectBackEnd[] = [
     {
       "title": "D&D Game",
       "tech": "POO",
-      "description": "API RESTful para um jogo de RPG de mesa. Utilizando o paradigma de programação orientada a objetos, foi possível criar um sistema de personagens, itens, monstros e magias.",
+      "description": "api REST para um jogo de RPG de mesa. Utilizando o paradigma de programação orientada a objetos, foi possível criar um sistema de personagens, itens, monstros e magias.",
       "github": "https://github.com/LucasDiello/trybers-and-dragons",
-      "descriptionEn":"API RESTful for a tabletop RPG game. Using the object-oriented programming paradigm, it was possible to create a system of characters, items, monsters and spells."
+      "descriptionEn":"api REST for a tabletop RPG game. Using the object-oriented programming paradigm, it was possible to create a system of characters, items, monsters and spells."
     },
     {
       "title": "Store Manager",
       "tech": "CRUD",
-      "description": "Esta é uma API RESTful desenvolvida para gerenciar operações em um sistema de estoque e sales, utilizando o banco de dados MySQL para a gestão de dados.",
+      "description": "Esta é uma api REST desenvolvida para gerenciar operações em um sistema de estoque e sales, utilizando o banco de dados MySQL para a gestão de dados.",
       "github": "https://github.com/LucasDiello/store-manager",
       "descriptionEn":"This is a RESTful API developed to manage operations in a stock and sales system, using the MySQL database to manage data."
     },
@@ -536,9 +583,9 @@ export const projectsBackEnd : ProjectBackEnd[] = [
     {
       "title": "Blog API",
       "tech": "CRUD",
-      "description": "API RESTful para um blog, com funcionalidades como cadastro e listagem de posts, listagem de categorias, login de usuários, validação de Token JWT e até mesmo a possibilidade de cadastro de posts com validação de token JWT.",
+      "description": "api REST para um blog, com funcionalidades como cadastro e listagem de posts, listagem de categorias, login de usuários, validação de Token JWT e até mesmo a possibilidade de cadastro de posts com validação de token JWT.",
       "github": "https://github.com/LucasDiello/blogs-api",
-      "descriptionEn":"API RESTful for a blog, with features such as post registration and listing, category listing, user login, JWT Token validation and even the possibility of post registration with JWT token validation."
+      "descriptionEn":"api REST for a blog, with features such as post registration and listing, category listing, user login, JWT Token validation and even the possibility of post registration with JWT token validation."
     },
     {
       "title": "App de Futebol",

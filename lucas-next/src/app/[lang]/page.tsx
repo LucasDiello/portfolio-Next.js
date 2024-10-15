@@ -5,6 +5,7 @@ import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-serve
 import React from 'react';
 
 export default function Home({ params }: { params: { lang: Locale } }) {
+
   return (
     <main>
       <Projects />
