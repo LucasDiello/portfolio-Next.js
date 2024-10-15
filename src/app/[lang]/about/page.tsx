@@ -4,12 +4,9 @@ import React, { useState } from 'react';
 import eu from '@/images/eu2.jpeg';
 import Link from 'next/link';
 import '../../../styles/globals.css';
-import { Barlow_Condensed } from 'next/font/google';
 import toast from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
 import { useDictionary } from '@/app/context/DictionaryContext';
-
-export const barlow = Barlow_Condensed({ subsets: ['latin'], weight: '500' });
 
 const page = () => {
   const [email, setEmail] = useState("");
