@@ -223,7 +223,7 @@ const page = () => {
         <Image src={eu} alt="" className=" h-[450px] w-full object-cover object-top " />
       </div>
       <div className="mt-5">
-        <h1 className={`font-oswald text-4xl tracking-wide`}>
+        <h1 className={`font-oswald text-4xl tracking-wide text-white`}>
         {translation.about_me_description2}
         </h1>
         <p className="mt-5 text-sm font-light text-[#B0B0B0]">
@@ -232,7 +232,7 @@ const page = () => {
       </div>
       {skillsAndExperience.map((section) => (
         <div key={section.title}>
-          <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
+          <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide text-white">
             {lang === "pt-BR" ? section.title : section.titleEn}
           </h2>
           <ul className={`mt-4 grid grid-cols-2 gap-4 text-sm font-light text-[#B0B0B0]`}>
@@ -260,7 +260,7 @@ const page = () => {
         </div>
       ))}
       <div className="mt-5">
-        <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide">
+        <h2 className="font-base font-oswald mt-4 border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide text-white">
           {translation.fast_contact}!
         </h2>
         <p className="mt-4 text-sm font-light text-[#B0B0B0]">

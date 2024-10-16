@@ -10,7 +10,7 @@ const page = () => {
   return (
     <section className="md:p-16 p-4 w-full lg:w-[80%] mx-auto">
       <div className="flex flex-col items-center justify-center">
-      <h2 className="text-7xl mt-4 mb-10 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">Back-End</h2>
+      <h2 className="text-7xl mt-4 mb-10 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">Back-End</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsBackEnd.map((project) => (
             <div
@@ -18,7 +18,7 @@ const page = () => {
               className="flex flex-col items-start justify-between p-6 space-y-5 bg-[#1e1e1e] shadow-lg hover:shadow-2xl 
               "
             >
-        <h1 className="mb-3 tracking-tighter mt-4 text-3xl  font-mono">
+        <h1 className="mb-3 tracking-tighter mt-4 text-3xl font-mono text-white">
           <a
             href={project.github}
             target='_blank'
