@@ -561,13 +561,13 @@ export const futureProjects = [
 export const projectsBackEnd : ProjectBackEnd[] = [
     {
       "title": "D&D Game",
-      "description": "api REST para um jogo de RPG de mesa. Utilizando o paradigma de programação orientada a objetos, foi possível criar um sistema de personagens, itens, monstros e magias.",
+      "description": "api REST para um jogo de RPG de mesa. Utilizando o paradigma de programação orientada a objetos com typescript, foi possível criar um sistema de personagens, itens, monstros e magias.",
       "github": "https://github.com/LucasDiello/trybers-and-dragons",
       "descriptionEn":"api REST for a tabletop RPG game. Using the object-oriented programming paradigm, it was possible to create a system of characters, items, monsters and spells."
     },
     {
       "title": "Store Manager",
-      "description": "Esta é uma api REST desenvolvida para gerenciar operações em um sistema de estoque e sales, utilizando o banco de dados MySQL para a gestão de dados.",
+      "description": "Esta é uma api REST desenvolvida para gerenciar operações em um sistema de estoque e vendas, utilizando o banco de dados MySQL para a gestão de dados.",
       "github": "https://github.com/LucasDiello/store-manager",
       "descriptionEn":"This is a RESTful API developed to manage operations in a stock and sales system, using the MySQL database to manage data."
     },

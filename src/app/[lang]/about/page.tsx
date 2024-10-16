@@ -6,6 +6,7 @@ import '../../../styles/globals.css';
 import toast from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
 import { useDictionary } from '@/app/context/DictionaryContext';
+import { IoMdArrowDropdown } from 'react-icons/io';
 
 const page = () => {
   const [email, setEmail] = useState("");
@@ -121,29 +122,32 @@ const page = () => {
       titleEn: "Technologies and Skills",
       items: [
         { name: "JavaScript", description: "Linguagem de programação interpretada.", descriptionEN: "Interpreted programming language." },
+        { name: "Java Spring Boot", description: "Framework para desenvolvimento em Java.", descriptionEN: "Framework for Java application development." },
+        { name: "TypeScript", description: "Superset de JavaScript com tipagem estática.", descriptionEN: "Superset of JavaScript with static typing." },
         { name: "React.js", description: "Biblioteca para construção de interfaces de usuário.", descriptionEN: "Library for building user interfaces." },
         { name: "Next.js", description: "Framework de React.", descriptionEN: "React framework." },
-        { name: "HTML", description: "Linguagem de marcação de hipertexto.", descriptionEN: "Hypertext Markup Language." },
-        { name: "CSS", description: "Folhas de estilo em cascata.", descriptionEN: "Cascading Style Sheets." },
         { name: "Tailwind", description: "Framework CSS utilitário.", descriptionEN: "Utility-first CSS framework." },
+        { name: "SASS", description: "Pré-processador CSS.", descriptionEN: "CSS preprocessor." },
         { name: "Node.js", description: "Ambiente de execução JavaScript.", descriptionEN: "JavaScript runtime environment." },
-        { name: "Express", description: "Framework minimalista para Node.js.", descriptionEN: "Minimalist framework for Node.js." },
         { name: "MongoDB", description: "Banco de dados NoSQL.", descriptionEN: "NoSQL database." },
-        { name: "Prisma", description: "ORM para Node.js.", descriptionEN: "ORM for Node.js." },
         { name: "MySQL", description: "Banco de dados relacional.", descriptionEN: "Relational database." },
-        { name: "TypeScript", description: "Superset de JavaScript com tipagem estática.", descriptionEN: "Superset of JavaScript with static typing." },
-        { name: "Java Spring Boot", description: "Framework para desenvolvimento de aplicações em Java.", descriptionEN: "Framework for Java application development." },
+        { name: "Express", description: "Framework para API em Node.js.", descriptionEN: "Minimalist framework for Node.js." },
+        { name: "Prisma", description: "ORM para Node.js.", descriptionEN: "ORM for Node.js." },
         { name: "Jest/RTL", description: "Testes unitários e de integração.", descriptionEN: "Unit and integration testing." },
+        { name: "SEO", description: "Otimização de mecanismos de busca.", descriptionEN: "Search engine optimization." },
       ],
     },
     {
-      title: "Ferramentas",
+      title: "Ferramentas e Metodologias",
       titleEn: "Tools",
       items: [
         { name: "Git", description: "Controle de versão.", descriptionEN: "Version control." },
         { name: "GitHub", description: "Plataforma de hospedagem de código.", descriptionEN: "Code hosting platform." },
         { name: "Scrum", description: "Metodologia ágil para desenvolvimento de software.", descriptionEN: "Agile software development methodology." },
-        { name: "SEO", description: "Otimização de mecanismos de busca.", descriptionEN: "Search engine optimization." },
+        { name: "VSCode", description: "Editor de código.", descriptionEN: "Code editor." },
+        { name: "IntelliJ IDEA", description: "IDE para desenvolvimento Java.", descriptionEN: "IDE for Java development." },
+        { name: "Postman", description: "Plataforma para testes de API.", descriptionEN: "API development collaboration platform." },
+        { name: "Figma", description: "Ferramenta de design de interfaces.", descriptionEN: "Interface design tool." },
       ],
     },
     {
@@ -152,7 +156,7 @@ const page = () => {
       items: [
         { name: "Desenvolvimento de sites", description: "Construção de sites responsivos e acessíveis.", descriptionEN: "Building responsive and accessible websites." },
         { name: "Básico de SOLID/Clean Code", description: "Princípios de desenvolvimento de software.", descriptionEN: "Software development principles." },
-        { name: "Adaptável", description: "Capacidade de se ajustar a diferentes contextos e desafios.", descriptionEN: "Ability to adapt to different contexts and challenges." },
+        { name: "Adaptável", description: "Capacidade de se ajustar a diferentes contextos.", descriptionEN: "Ability to adapt to different contexts and challenges." },
         { name: "Comunicativo", description: "Habilidade de transmitir informações de forma clara.", descriptionEN: "Ability to convey information clearly." },
         { name: "Empático", description: "Capacidade de se colocar no lugar dos outros.", descriptionEN: "Ability to empathize with others." },
         { name: "Aceito feedbacks", description: "Aberto a críticas construtivas.", descriptionEN: "Open to constructive feedback." },
@@ -166,7 +170,7 @@ const page = () => {
       items: [
         {
           name: "Desenvolvedor Full Stack",
-          description: "Freelancer",
+          description: "Freelancer (08/2023 - Atual)",
           descriptionEN: "Freelancer",
           subItems: [
             { name: "Desenvolvimento de ERP com equipe metodologia ágil scrum", nameEn: "ERP development with an agile scrum team." },
@@ -224,7 +228,7 @@ const page = () => {
       </div>
       <div className="mt-5">
         <h1 className={`font-oswald text-4xl tracking-wide text-white`}>
-        {translation.about_me_description2}
+        {translation.about_me_description2} <IoMdArrowDropdown className="inline-block text-blue-500" />
         </h1>
         <p className="mt-5 text-sm font-light text-[#B0B0B0]">
          {translation.about_me_text1}
@@ -242,7 +246,7 @@ const page = () => {
                 <p>{lang === "pt-BR" ? item.description : item.descriptionEN}</p>
                 {item.subItems && (
                   <ul>
-                    {item.subItems.map((subItem) => (
+                    {item.subItems.map((subItem,index) => (
                       <li key={subItem.name} className='w-[300px] md:w-[600px]'>
                         <h3 className="pb-1 pt-1">{lang === 'pt-BR' ? subItem.name : subItem.nameEn} </h3>
                       </li>
