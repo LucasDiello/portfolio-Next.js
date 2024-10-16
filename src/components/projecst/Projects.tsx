@@ -25,8 +25,8 @@ const Projects = () => {
       <div className="w-full md:p-16 p-4 pt-12 lg:w-2/3">
         <div className="flex items-center justify-center">
           <div className="nine">
-            <h1>
-              {translation.projects_title}<span>{translation.projects_subtitle}</span>
+            <h1 className='text-white'>
+              {translation.projects_title}<span className='text-black '>{translation.projects_subtitle}</span>
             </h1>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Projects = () => {
                 className="cursor-pointer mb-3 md:h-[380px] w-[800px] rounded md:object-cover object-contain"
               />
               <div className="p-0">
-                <h3 className="mb-3 text-[28px] tracking-tighter ">
+                <h3 className="mb-3 text-[28px] tracking-tighter text-white">
                   <a
                     href={project.link}
                     target="_blank"

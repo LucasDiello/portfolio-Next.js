@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import eu from '@/images/eu2.jpeg';
-import Link from 'next/link';
 import '../../../styles/globals.css';
 import toast from 'react-hot-toast';
 import emailjs from '@emailjs/browser';

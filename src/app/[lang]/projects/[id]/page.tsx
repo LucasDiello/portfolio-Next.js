@@ -18,7 +18,7 @@ const Page = () => {
         <Image src={project.image} alt="Elements" className="mb-3 md:h-[400px] w-[800px] rounded object-contain md:object-cover" />
       </div>
       <div className="p-0 md:w-[70%]">
-        <h1 className="mb-3 tracking-tighter font-oswald mt-4 text-4xl  ">
+        <h1 className="mb-3 tracking-tighter font-oswald mt-4 text-4xl text-white">
           <a
             href={project.link}
             target='_blank'
@@ -40,7 +40,7 @@ const Page = () => {
           </li>
         </ul>
         <p className="text-sm font-light text-[#B0B0B0] ">{lang === "pt-BR" ? project.description : project.descriptionEn}</p>
-          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.project_id_1}</h2>
+          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.project_id_1}</h2>
         <div>
           <ul className="text-[#B0B0B0] text-sm font-light mt-4">
             {project.technologies.map((tech) => (
@@ -51,25 +51,25 @@ const Page = () => {
           </ul>
         </div>
         <div>
-          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.project_id_2}</h2>
+          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.project_id_2}</h2>
           <p className="text-[#B0B0B0] text-sm font-light mt-4">{lang === "pt-BR" ? project.whatILearned : project.whatILearnedEn}</p>
         </div>
 
         <div>
-          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.project_id_3}</h2>
+          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.project_id_3}</h2>
           <p className="text-[#B0B0B0] text-sm font-light mt-4">{lang === "pt-BR" ? project.whatIdDoDifferently : project.whatIdDoDifferentlyEn}</p>
         </div>
           {
             project.whatsNext &&
             <div>
-          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.project_id_4}</h2>
+          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.project_id_4}</h2>
           <p className="text-[#B0B0B0] text-sm font-light mt-4">{lang === "pt-BR" ? project.whatsNext : project.whatsNextEn}</p>
         </div>
         }
           {
           project.images && 
         <div>
-          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.project_id_5}</h2>
+          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.project_id_5}</h2>
             
             <div className="flex flex-wrap gap-4 mt-4">
             {project.images?.map((image, index) => (
@@ -84,7 +84,7 @@ const Page = () => {
         </div>
           }
         <div>
-      <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.project_id_6}</h2>
+      <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.project_id_6}</h2>
         <p className="text-[#B0B0B0] text-sm font-light mt-4">{translation.project_text} <a href="mailto:
         lucasoliveiradiello@gmail.com" className="text-blue-400">lucasoliveiradiello@gmail.com</a></p>
         </div>

@@ -108,7 +108,7 @@ const Perfil = () => {
       <div className="mt-5">
         <div className="flex justify-center items-center flex-col">
           <Image className="object-cover rounded-full h-64 w-64" src={eu}  width="1000" height="1000" alt="" />
-          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.about_me}</h2>
+          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.about_me}</h2> 
           <p className="text-center mt-4 text-[#B0B0B0] text-sm font-light">
             {translation.about_me_description}
           </p>
@@ -117,7 +117,7 @@ const Perfil = () => {
           </Link>
         </div>
         <div className="bg-[#1a191d] p-6 mt-14 mb-14 flex justify-center items-center flex-col">
-          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.fast_contact}</h2>
+          <h2 className="text-3xl font-base mt-4 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.fast_contact}</h2>
           <p className="text-center mt-4 text-[#B0B0B0] text-sm font-light">
             {translation.fast_quick_contact}
           </p>
@@ -137,7 +137,7 @@ const Perfil = () => {
           </form>
         </div>
         <div className="flex justify-center items-center flex-col">
-        <h2 className="text-3xl font-base mb-10 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide">{translation.future_projects}</h2>
+        <h2 className="text-3xl font-base mb-10 border-b-[3px] border-blue-400 pb-3 font-oswald tracking-wide text-white">{translation.future_projects}</h2>
           {
             futureProjects.map((project) => {
               return (
