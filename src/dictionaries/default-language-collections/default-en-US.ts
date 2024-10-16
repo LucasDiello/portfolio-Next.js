@@ -34,7 +34,7 @@ export const enUS = {
     "project_id_6": "Any questions!",
     "project_text": "If you have any questions or want to know more about the project, contact me by my email: ",
     "project_text2": "If you want to access the application",
-    "about_me_description2": "My name is Lucas, I am 22 years old and a software developer with",
+    "about_me_description2": "My name is Lucas, I am 22 years old and a software developer!",
     "about_me_text1": "I am currently 2 years in the software development area, with partial knowledge in both Front End and Back End. My interest in technology began since childhood, I always ended up going to lan houses and disassembling computers (even without knowing what I was doing). Over time, I became interested in programming and started studying on my own, until I decided to really delve into the area and dive headfirst into courses and projects. Nowadays, I am always looking for new knowledge and challenges, so that I can become a better developer. Acting as a freelancer, I am always willing to help and learn from the projects that are proposed to me. I am looking forward to my next job opportunity, and I hope that through it, I can contribute to the growth of the company and also to my own professional growth.",
     }
 };

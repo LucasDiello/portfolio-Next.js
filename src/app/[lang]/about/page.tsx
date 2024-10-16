@@ -219,7 +219,7 @@ const page = () => {
   
 
   return (
-    <main className="md:w-[60%] md:p-16 p-4 pt-14">
+    <section className="md:w-[60%] md:p-16 p-4 pt-14">
       <div>
         <Image src={eu} alt="" className=" h-[450px] w-full object-cover object-top " />
       </div>
@@ -244,7 +244,9 @@ const page = () => {
                 {item.subItems && (
                   <ul>
                     {item.subItems.map((subItem) => (
-                      <li className=' w-[600px]' key={subItem.name}>{lang === "pt-BR" ? subItem.name : subItem.nameEn}</li>
+                      <li key={subItem.name} className='w-[300px] md:w-[600px]'>
+                        <h3 className="pb-1 pt-1">{lang === 'pt-BR' ? subItem.name : subItem.nameEn} </h3>
+                      </li>
                     ))}
                   </ul>
                 )}
@@ -276,7 +278,7 @@ const page = () => {
           </button>
         </form>
       </div>
-    </main>
+    </section>
   );
 };
 

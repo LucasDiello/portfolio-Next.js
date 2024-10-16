@@ -34,7 +34,7 @@ export const ptBR = {
     "project_id_6": "Caso alguma Duvida!",
     "project_text": "Caso tenha alguma dúvida ou queira saber mais sobre o projeto, entre em contato comigo pelo meu e-mail: ",
     "project_text2": "Caso queira acessar a aplicação, acesse o",
-    "about_me_description2": "Meu nome é Lucas, tenho 22 anos e sou desenvolvedor de software com",
+    "about_me_description2": "Meu nome é Lucas, tenho 22 anos e sou desenvolvedor de software!",
     "about_me_text1": "Atualmente estou há 2 anos na área de desenvolvimento de software, com conhecimento parcial tanto no Front End como também no Back End. Meu interesse pela tecnologia começou desde a infância, acabava sempre indo em lan houses e desmontando computadores (mesmo sem saber o que estava fazendo). Com o passar do tempo, acabei me interessando por programação e comecei a estudar sozinho, até que decidi realmente me aprofundar na área e cair de cabeça em cursos e projetos. Hoje em dia, estou sempre em busca de novos conhecimentos e desafios, para que eu possa me tornar um desenvolvedor cada vez melhor. Atuando como freelancer, estou sempre disposto a ajudar e a aprender com os projetos que me são propostos. Estou ansioso para minha próxima oportunidade de trabalho, e espero que possa através dela, contribuir com o crescimento da empresa e também com o meu próprio crescimento profissional.",
     
   }
