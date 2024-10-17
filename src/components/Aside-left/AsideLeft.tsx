@@ -69,7 +69,7 @@ const AsideLeft = () => {
             </Link>
           </li>
           <li>
-            <Link href="https://www.instagram.com/lucasdiello/" target="_blank" rel="noreferrer">
+            <Link href="https://wa.me/5551992514676" target="_blank" rel="noreferrer">
               <FaWhatsapp size={20} className="text-white hover:text-blue-400" />
             </Link>
           </li>
