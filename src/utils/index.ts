@@ -185,8 +185,8 @@ export const projectsFrontEnd : Project[] = [
       id: 3,
       name: "Restaurant Borcelle",
       images: [restaurant1, restaurant2, restaurant3, restaurant4, restaurant5, restaurant6, restaurant7, restaurant8, restaurant9],
-      date: "27 junho, 2023",
-      dateEn: "June 27, 2023",
+      date: "27 Abril, 2023",
+      dateEn: "April 27, 2023",
       image: restaurantPerfil,
       description:
         "Projeto desenvolvido em React, com o intuito de criar uma aplicação de um restaurante, com uma inteface agradável, para que o usuário possa conhecer o ambiente, o cardápio, fazer reservas, e ver informações sobre o restaurante.",
@@ -226,8 +226,8 @@ export const projectsFrontEnd : Project[] = [
       name: "Recipes App",
       image: recipesPerfil,
       images : [recipes1, recipes2, recipes3, recipes4, recipes5, recipes6, recipes7],
-      date: "12 março, 2023",
-      dateEn: "March 12, 2023",
+      date: "12 Junho, 2023",
+      dateEn: "June 12, 2023",
       description:
         "Esta aplicação foi desenvolvida em 1 time de devs, com o objetivo de criar um aplicativo de receitas para responsividade mobile, onde é possível ver, filtrar, comentar as receitas, criar sua receita, realizar uma receita, favoritar receitas entre várias outras opções com o sistema crud. Caso queira ver mais sobre o projeto, acesse o link do github. ou o link do projeto.",
       descriptionEn:" This project was created in a group of devs, with the aim of creating a recipe app, where you can view, filter and favorite recipes, as well as create, edit and delete recipes. If you want to see more about the project, access the github link. or the project link.",
@@ -277,8 +277,8 @@ export const projectsFrontEnd : Project[] = [
     {
       id: 5,
       name: "Mecânica",
-      date: "12 março, 2023",
-      dateEn: "March 12, 2023",
+      date: "25 Julho, 2024",
+      dateEn: "July 25, 2024",
       image: ldmechanics1,
       images: [ldmechanics1, ldmechanics2, ldmechanics3, ldmechanics4, ldmechanics5],
       description:
@@ -318,8 +318,8 @@ export const projectsFrontEnd : Project[] = [
     {
       id:6,
       name: "Barbearia",
-      date: "12 março, 2023",
-      dateEn: "March 12, 2023",
+      date: "15 agosto, 2024",
+      dateEn: "August 15, 2024",
       image: barber1,
       images: [barber1, barber2, barber3, barber4, barber5, barber6],
       description: "Projeto desenvolvido em React para criar um site de barbearia com uma interface amigável e moderna. A plataforma permite que os usuários explorem o ambiente, conheçam os serviços oferecidos, façam agendamentos online de forma simples e prática, além de acessar todas as informações relevantes sobre a barbearia, como localização e horário de funcionamento.",
@@ -360,8 +360,8 @@ export const projectsFrontEnd : Project[] = [
     {
       id: 7,
       name: "LM Digital",
-      date: "12 março, 2023",
-      dateEn: "March 12, 2023",
+      date: "20 Dezembro, 2023",
+      dateEn: "December 20, 2023",
       image: lmDigital1,
       images: [lmDigital1, lmDigital2, lmDigital3, lmDigital4, lmDigital5, lmDigital6, lmDigital7],
       description:
@@ -401,9 +401,9 @@ export const projectsFrontEnd : Project[] = [
     {
       id: 8,
       name: "ByteBuy",
-        date: "12 março, 2023",
-        dateEn: "March 12, 2023",
-      image: bytebuy3,
+        date: "10 Outubro, 2023",
+        dateEn: "October 10, 2023",
+        image: bytebuy3,
       images: [bytebuy1, bytebuy2, bytebuy3, bytebuy4],
       description:
         "Uma plataforma e-commerce. Criado com uma abordagem centrada no cliente e na usabilidade, o sistema permite que os clientes comprem produtos e serviços, adicione ou remova itens do carrinho, entre outras funcionalidades.",
@@ -490,8 +490,8 @@ export const projectsFrontEnd : Project[] = [
     {
       id: 10,
       name: "Trivia",
-      date: "12 março, 2023",
-      dateEn: "March 12, 2023",
+      date: "05 Janeiro, 2023",
+      dateEn: "January 05, 2023",
       image: triviaPerfil,
       images: [trivia1, trivia2, trivia3, trivia4],
       description:

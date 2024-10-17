@@ -22,7 +22,7 @@ export const enUS = {
     "presentation": "HELLO, I'M A FULL STACK DEVELOPER REACTJS / JAVA SPRING BOOT AND MY NAME IS ",
     "projects_title": "Projects",
     "projects_subtitle": "Quality & Efficiency",
-    "project_date": "Date",
+    "project_date": "Date:",
     "future_projects": "Future Projects!",
     "view_more": "Read More →",
     "view_in_github": "View in Github →",

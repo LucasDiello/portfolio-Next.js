@@ -22,7 +22,6 @@ export const ptBR = {
     "presentation": "OLÁ, SOU DESENVOLVEDOR FULL STACK REACTJS / JAVA SPRING BOOT E ME CHAMO ",
     "projects_title": "Projetos",
     "projects_subtitle": "Qualidade & Eficiência",
-    "project_date": "Data",
     "future_projects": "Futuros Projetos!", 
     "view_more": "Ver Mais →",
     "view_in_github": "Ver no Github →",

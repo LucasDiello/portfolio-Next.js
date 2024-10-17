@@ -55,10 +55,14 @@ const Projects = () => {
                 <ul className="mb-3 flex space-x-4 font-light uppercase text-white">
                   <li className="flex items-center justify-center gap-2">
                     <CiClock2 size={20} className="text-blue-500" />
-                    {translation.project_date}: {lang === 'pt-BR' ? project.date : project.dateEn}
+                    {translation.project_date} {lang === 'pt-BR' ? project.date : project.dateEn}
                   </li>
                   <li>
-                    <a href={project.github} className="flex items-center justify-center gap-2 hover:text-blue-400">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="flex items-center justify-center gap-2 hover:text-blue-400"
+                    >
                       <LiaGithubSquare size={24} className="text-blue-500" />
                       Github
                     </a>
