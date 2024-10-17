@@ -31,6 +31,7 @@ export type ProjectBackEnd = {
     title: string;
     description: string;
     descriptionEn: string;
+    techs: string[],
     github: string;
   };
 

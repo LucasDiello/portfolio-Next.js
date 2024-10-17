@@ -1,9 +1,12 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended", "plugin:prettier/recommended"],
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended", "plugin:prettier/recommended", "eslint:recommended"],
   "plugins": [
     "prettier"
   ],
   "rules": {
     "prettier/prettier": "off",
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
 },
+
 }

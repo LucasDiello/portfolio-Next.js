@@ -560,38 +560,51 @@ export const futureProjects = [
 
 export const projectsBackEnd : ProjectBackEnd[] = [
     {
+      "title": "Visualize já",
+      "description": "API RESTfull para um sistema de imóveis, com validações de dados, autenticação de usuários, cadastro de imóveis, listagem de imóveis, busca de imóveis por filtros, negociação com proprietários entre outras funcionalidades.",
+      "techs": ["Node.js", "Oauth", "NodeMailer", "MongoDB", "Express", "Node.js", "JWT", "Prisma", "Socket.io"],
+      "github": "https://github.com/LucasDiello/full-stack-hosting",
+      "descriptionEn":"RESTful API for a real estate system, with data validation, user authentication, property registration, property listing, property search by filters, among other features."
+    },
+    {
       "title": "D&D Game",
-      "description": "api REST para um jogo de RPG de mesa. Utilizando o paradigma de programação orientada a objetos com typescript, foi possível criar um sistema de personagens, itens, monstros e magias.",
+      "description": "Um jogo simples de RPG de mesa. Utilizando POO com typescript, foi possível criar um sistema de personagens, itens, monstros magias e ataques onde o usuário pode duelar com os monstros.",
+      "techs": ["Node.js", "Express", "TypeScript", "POO", "SOLID"],
       "github": "https://github.com/LucasDiello/trybers-and-dragons",
       "descriptionEn":"api REST for a tabletop RPG game. Using the object-oriented programming paradigm, it was possible to create a system of characters, items, monsters and spells."
     },
     {
       "title": "Store Manager",
-      "description": "Esta é uma api REST desenvolvida para gerenciar operações em um sistema de estoque e vendas, utilizando o banco de dados MySQL para a gestão de dados.",
+      "description": "Esta é uma api RESTfull desenvolvida para gerenciar operações em um sistema de estoque e vendas, utilizando o banco de dados MySQL para a gestão de dados.",
+      techs: ["Node.js", "Express", "MySQL", "Joi Schemas", "sinon", "mocha", "Dockerfile"],
       "github": "https://github.com/LucasDiello/store-manager",
       "descriptionEn":"This is a RESTful API developed to manage operations in a stock and sales system, using the MySQL database to manage data."
     },
     {
       "title": "JWT SMITH",
-      "description": "Sistema de gerenciamento de pedidos e produtos, com funcionalidades como cadastro e listagem de produtos, listagem de pedidos, login de usuários, validações de produtos e até mesmo a possibilidade de cadastro de pedidos com validação de token JWT.",
+      "description": "Sistema de gerenciamento de pedidos e produtos, com funcionalidades como cadastro e listagem de produtos, listagem de pedidos, login de usuários, validações de produtos e validaçao com JWT.",
+      techs: ["Node.js", "Express", "JWT", "MySQL", "Sequelize", "sinon", "mocha"],
       "github": "https://github.com/LucasDiello/JWT-Smith",
       "descriptionEn":"System for managing orders and products, with features such as product registration and listing, order listing, user login, product validations and even the possibility of order registration with JWT token validation."
     },
     {
       "title": "Blog API",
       "description": "api REST para um blog, com funcionalidades como cadastro e listagem de posts, listagem de categorias, login de usuários, validação de Token JWT e até mesmo a possibilidade de cadastro de posts com validação de token JWT.",
+      "techs": ["Node.js", "Express", "JWT", "MySQL", "Sequelize", "Joi Schemas"],
       "github": "https://github.com/LucasDiello/blogs-api",
       "descriptionEn":"api REST for a blog, with features such as post registration and listing, category listing, user login, JWT Token validation and even the possibility of post registration with JWT token validation."
     },
     {
       "title": "App de Futebol",
-      "description": "Aplicação Full Stack para gerenciamento de jogos de futebol, com funcionalidades como cadastro e listagem de jogos, listagem d times, login de usuários, validação de Token JWT e até mesmo a possibilidade de cadastro de jogos com validação de token JWT.",
+      "description": "Sistema para gerenciamento de jogos de futebol, com funcionalidades como cadastro e listagem de jogos, listagem d times, login de usuários, validação de Token JWT e até mesmo a possibilidade de cadastro de jogos com validação de token JWT.",
+      techs: ["Node.js", "Express", "JWT", "MySQL", "Sequelize", "Joi Schemas", "railway deploy"],
       "github": "https://github.com/LucasDiello/app-futebol-clube",
       "descriptionEn":"Full Stack application for managing football games, with features such as game registration and listing, team listing, user login, JWT Token validation and even the possibility of game registration with JWT token validation."
     },
     {
       "title": "Docker todo list",
-      "description": "  Aplicação Full Stack utilizando Docker para gerenciamento de tarefas, com funcionalidades como cadastro e listagem de tarefas...",
+      "description": "  Sistema utilizando Docker para gerenciamento de tarefas, com funcionalidades como listagem de tarefas...",
+      techs: ["Node.js", "files", "Docker", "Express"],
       "github": "https://github.com/LucasDiello/docker-todo-list",
       "descriptionEn":"Full Stack application using Docker for task management, with features such as task registration and listing..."
     }
