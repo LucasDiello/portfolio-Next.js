@@ -47,7 +47,7 @@ const Projects = () => {
                   <a
                     href={project.link}
                     target="_blank"
-                    className="font-base font-oswald mt-4 text-3xl tracking-wide hover:text-blue-400"
+                    className="font-oswald mt-4 text-3xl tracking-wide hover:text-blue-400"
                   >
                     {project.name}
                   </a>

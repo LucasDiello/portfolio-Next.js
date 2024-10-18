@@ -23,3 +23,7 @@ body {
 button, a {
   cursor: pointer;
 }
+
+.font-oswald {
+  font-family: 'Oswald', sans-serif;
+}

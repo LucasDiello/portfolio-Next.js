@@ -2,7 +2,6 @@
 import React from 'react';
 import { Nav } from '../Nav/Nav';
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
-import './asideLeft.css';
 import Link from 'next/link';
 import { BiMenu } from 'react-icons/bi';
 import { usePathname } from 'next/navigation';
@@ -21,7 +20,7 @@ const AsideLeft = () => {
       <div
         className={`${
           isOpen ? 'left-0' : 'left-[-120%]'
-        } z-49 sidenav fixed top-0 flex  min-h-[100%] min-w-[260px] flex-col justify-between bg-[#1f1e22] p-16 pt-12 md:sticky md:min-h-[100vh] md:bg-inherit`}
+        } z-49 fixed top-0 flex min-h-[100%] min-w-[260px] flex-col  justify-between bg-[#1f1e22] p-16 pt-12 transition-all duration-500 ease-in-out md:sticky md:min-h-[100vh] md:bg-inherit`}
       >
         <h1 className="border-b-[3px] border-blue-400 pb-4 text-5xl font-bold text-white hover:text-blue-400">
           <Link href={'/'}>

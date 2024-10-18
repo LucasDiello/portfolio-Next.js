@@ -20,20 +20,20 @@ const page = () => {
               className="flex flex-col items-start justify-between space-y-5 bg-[#1e1e1e] p-6 shadow-lg hover:shadow-2xl 
               "
             >
-              <h1 className="mb-3 mt-4 font-mono text-3xl tracking-tighter text-white">
+              <h1 className="font-oswald mb-3 mt-4 text-4xl tracking-tighter text-white">
                 <a href={project.github} target="_blank" className=" hover:text-blue-400">
                   {project.title}
                 </a>
-                <div className="flex flex-wrap items-center justify-start">
+                <div className="mt-2 flex flex-wrap items-center justify-start">
                   {project.techs.map((tech, index) => (
-                    <span className="mr-2 p-0 text-end text-xs text-[#B0B0B0]">
+                    <span className="mr-1 p-0 text-end font-mono text-[10px] leading-4 tracking-wide text-[#B0B0B0]">
                       {tech}
                       {index < project.techs.length - 1 && ','}
                     </span>
                   ))}
                 </div>
               </h1>
-              <p className="mb-4 text-sm font-light text-[#B0B0B0]">
+              <p className="mb-4 text-xs font-extralight text-[#B0B0B0]">
                 {lang === 'pt-BR' ? project.description : project.descriptionEn}
               </p>
               <Link
