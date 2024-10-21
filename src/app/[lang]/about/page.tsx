@@ -232,20 +232,20 @@ const page = () => {
         <Image src={eu} alt="" className=" h-[450px] w-full object-cover object-top " />
       </div>
       <div className="mt-5">
-        <h1 className={`font-oswald text-4xl tracking-wide text-white`}>
+        <h1 className={`font-oswald text-2xl tracking-wide text-white md:text-4xl`}>
           {translation.about_me_description2} <IoMdArrowDropdown className="inline-block text-blue-500" />
         </h1>
-        <p className="mt-5 text-sm font-light text-[#B0B0B0]">{translation.about_me_text1}</p>
+        <p className="mt-5 text-xs font-light text-[#B0B0B0] md:text-sm">{translation.about_me_text1}</p>
       </div>
       {skillsAndExperience.map((section) => (
         <div key={section.id}>
-          <h2 className="font-base font-oswald mt-4 flex items-center border-b-[3px] border-blue-400 pb-3 text-3xl tracking-wide text-white">
+          <h2 className="font-base font-oswald mt-4 flex items-center border-b-[3px] border-blue-400 pb-3 text-xl tracking-wide text-white md:text-3xl">
             <AiFillStar className="mr-2" size={23} /> {lang === 'pt-BR' ? section.title : section.titleEn}
           </h2>
           <ul
-            className={`mt-4 grid ${section.id === 5 ? 'w-[100%]' : 'w-[500px]'}  ${
-              section.id === 1 ? 'grid-cols-3' : 'grid-cols-2'
-            } ${section.id === 1 && 'w-full'} gap-2 text-sm font-light text-[#B0B0B0]`}
+            className={`mt-4 grid ${section.id === 5 ? 'md:w-[100%]' : 'md:w-[500px]'}  ${
+              section.id === 1 ? 'md:grid-cols-3' : 'md:grid-cols-2'
+            } ${section.id === 1 && 'md:w-full'} gap-2 text-xs font-light text-[#B0B0B0] md:text-sm  `}
           >
             {section.items.map((item) => (
               <li key={item.name}>
