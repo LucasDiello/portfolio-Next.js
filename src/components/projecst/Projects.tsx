@@ -9,6 +9,8 @@ import Link from 'next/link';
 import { useDictionary } from '@/app/context/DictionaryContext';
 import './projects.css';
 import { useRouter } from 'next/navigation';
+import { BiGlobeAlt } from 'react-icons/bi';
+import { AiOutlineGlobal } from 'react-icons/ai';
 
 const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -77,6 +79,14 @@ const Projects = () => {
                 >
                   {translation.view_more}
                 </Link>
+                <a
+                  href={`${project.link}`}
+                  target="_blank"
+                  className="ml-3 mt-3 inline-block bg-blue-500 px-4 py-2 font-mono text-sm text-white hover:underline"
+                >
+                  <AiOutlineGlobal className="mr-2 inline-block" />
+                  {project.link.split('//')[1].split('/')[0]}
+                </a>
               </div>
             </article>
           );
