@@ -73,20 +73,22 @@ const Projects = () => {
                 <p className="text-sm font-light text-[#B0B0B0] ">
                   {lang === 'pt-BR' ? project.description.slice(0, 120) : project.descriptionEn.slice(0, 120)}...
                 </p>
-                <Link
-                  href={`/projects/${project.id}`}
-                  className="mt-3 inline-block bg-blue-500 px-4 py-2 font-mono text-sm text-white hover:underline"
-                >
-                  {translation.view_more}
-                </Link>
-                <a
-                  href={`${project.link}`}
-                  target="_blank"
-                  className="ml-3 mt-3 inline-block bg-blue-500 px-4 py-2 font-mono text-sm text-white hover:underline"
-                >
-                  <AiOutlineGlobal className="mr-2 inline-block" />
-                  {project.link.split('//')[1].split('/')[0]}
-                </a>
+                <div className="mt-3 flex">
+                  <Link
+                    href={`/projects/${project.id}`}
+                    className=" inline-block bg-blue-500 px-4 py-2 font-mono text-[10px] text-white hover:underline md:text-sm"
+                  >
+                    {translation.view_more}
+                  </Link>
+                  <a
+                    href={`${project.link}`}
+                    target="_blank"
+                    className="ml-3  inline-block bg-blue-500 px-4 py-2 font-mono text-[10px] text-white hover:underline md:text-sm"
+                  >
+                    <AiOutlineGlobal className="mr-2 inline-block" />
+                    {project.link.split('//')[1].split('/')[0].split('.app')}
+                  </a>
+                </div>
               </div>
             </article>
           );
